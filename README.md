@@ -21,4 +21,4 @@ ikpy链接:https://github.com/Phylliade/ikpy
 
 【inter_t265】
 
-inter_t265文件夹包含“test_images”
+inter_t265文件夹包含“test_images”测试集图片，“t265_yolo11.bin”视觉模型文件，以及“t265_yolo.py”
