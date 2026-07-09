@@ -53,3 +53,14 @@ The project adopts a modular design where each core component carries distinct r
 │
 ├── .gitignore            # Git ignore configuration file
 └── README.md             # Main project documentation (System Master Control Guide)
+
+Here is the professional English translation for the individual module descriptions you provided. You can use these descriptions directly for individual module documentation or presentation slides:
+
+【Conveyor_Belt】
+The conveyor belt directory contains the "Conveyor Belt Extension Board" configuration, "Step-down Module" engineering files, and underlying motor driver routines. Controlled by the RDK X5 host as the master processor, the system dispatches instructions via serial/bus communication to the low-level STM32C8T6 MCU, driving the conveyor motor to execute automated feeding.
+
+【inter_t265】
+The inter_t265 directory encompasses the test_images validation dataset, the t265_yolo11.bin visual model file, and the t265_yolo.py core execution source code. Frame images are captured via the T265 camera, followed by OpenCV-driven preprocessing to eliminate lens distortion. The rectified, crisp frames are then fed into the board on-the-fly, leveraging the hardware BPU for real-time AI inference.
+
+【Robotic_Arm】
+This directory comprises the ROS2-based motion planning and control nodes, alongside trajectory calculation core files. It handles real-time inter-module communication through the RDK X5 host, collaborating seamlessly with other components to execute and complete the overall target tasks.
