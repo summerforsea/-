@@ -3,7 +3,9 @@
 
 
 支持平台型号：RDK X5
-支持ROS2版本
+
+支持ROS2(Humbel)版本
+
 前置依赖：需要先安装RealRense SDK，RealRense—ROS
 
 【传送带】
