@@ -21,4 +21,4 @@ ikpy链接:https://github.com/Phylliade/ikpy
 
 【inter_t265】
 
-inter_t265文件夹包含
+inter_t265文件夹包含“test_images”
