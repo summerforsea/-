@@ -8,6 +8,10 @@
 
 前置依赖：需要先安装RealRense SDK，RealRense—ROS
 
+RealRense SDK链接：https://github.com/realsenseai/librealsense?tab=readme-ov-file
+
+RealRense—ROS链接：https://github.com/realsenseai/realsense-ros?tab=readme-ov-file
+
 【传送带】
 
 传送带文件包含传送“带传送带拓展版”、“降压模块”以及电机驱动程序，由RDK X5上位机主控，通过通信控制STM32C8T6单片机，驱动传送带电机运转进行上料。
