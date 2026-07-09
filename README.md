@@ -6,7 +6,7 @@
 
 支持ROS2(Humbel)版本
 
-前置依赖：需要先安装RealRense SDK，RealRense—ROS，ikpy
+前置依赖：需要先安装RealRense SDK，RealRense—ROS，ikpy，opcn cv
 
 RealRense SDK链接：https://github.com/realsenseai/librealsense?tab=readme-ov-file
 
@@ -21,4 +21,4 @@ ikpy链接:https://github.com/Phylliade/ikpy
 
 【inter_t265】
 
-inter_t265文件夹包含“test_images”测试集图片，“t265_yolo11.bin”视觉模型文件，以及“t265_yolo.py”执行源码。通过t265摄像头
+inter_t265文件夹包含“test_images”测试集图片，“t265_yolo11.bin”视觉模型文件，以及“t265_yolo.py”执行源码。通过t265摄像头截取帧图像，然后通过open cv对畸变图像进行去畸变处理，实时导入到板端中通过BPU进行实时推理
