@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="jixiebi">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0634303829418545 -0.0711065090450506 -0.0538651002391742"
+        rpy="0 0 0" />
+      <mass
+        value="0.420489890278231" />
+      <inertia
+        ixx="0.00111937167429758"
+        ixy="-9.38187827214536E-08"
+        ixz="-7.40384986980624E-05"
+        iyy="0.00203670753313454"
+        iyz="-2.96143597560607E-07"
+        izz="0.000932898093382706" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Empty_Link1">
+    <inertial>
+      <origin
+        xyz="0.00347263010106362 -0.00311832979060158 0.00353054587175676"
+        rpy="0 0 0" />
+      <mass
+        value="0.235675852897505" />
+      <inertia
+        ixx="6.08252945024111E-05"
+        ixy="3.58814196098952E-07"
+        ixz="-9.36672130582366E-07"
+        iyy="7.49814768079315E-05"
+        iyz="2.0173405836646E-08"
+        izz="8.13328023146016E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0.060085 0.063479 0"
+      rpy="0.33513 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Empty_Link1" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.7"
+      upper="1.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link2">
+    <inertial>
+      <origin
+        xyz="0.0258796348069651 0.00828780497385037 0.0447390978439766"
+        rpy="0 0 0" />
+      <mass
+        value="0.0192065756808143" />
+      <inertia
+        ixx="1.29090933181484E-05"
+        ixy="1.78508917660652E-10"
+        ixz="-6.73799122836867E-06"
+        iyy="1.7918681489228E-05"
+        iyz="4.36350920394305E-10"
+        izz="5.13476322153778E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0.033039 0.00021948 0.04198"
+      rpy="1.5708 0 1.0472" />
+    <parent
+      link="Empty_Link1" />
+    <child
+      link="Empty_Link2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.86"
+      upper="0.33"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link3">
+    <inertial>
+      <origin
+        xyz="0.0136070411021878 -0.0202549697295141 -0.00656471084495087"
+        rpy="0 0 0" />
+      <mass
+        value="0.199282304525679" />
+      <inertia
+        ixx="5.04067863351373E-05"
+        ixy="-4.51113907663924E-08"
+        ixz="-8.05684494390357E-09"
+        iyy="4.6242760408119E-05"
+        iyz="1.63971722015123E-09"
+        izz="4.54802538096738E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0.052 0 0.090067"
+      rpy="0 0 0" />
+    <parent
+      link="Empty_Link2" />
+    <child
+      link="Empty_Link3" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.14"
+      upper="0.94"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link4">
+    <inertial>
+      <origin
+        xyz="-0.00189748804956855 0.046660692495981 -0.00289519147949302"
+        rpy="0 0 0" />
+      <mass
+        value="0.0601428230591766" />
+      <inertia
+        ixx="9.60361864172028E-06"
+        ixy="4.19797993231364E-08"
+        ixz="9.18546333694597E-07"
+        iyy="8.59750510372968E-06"
+        iyz="-1.99948792208276E-08"
+        izz="1.07868892952273E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0.031346 -0.04205 0.045346"
+      rpy="-2.0944 0 -1.5708" />
+    <parent
+      link="Empty_Link3" />
+    <child
+      link="Empty_Link4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.7"
+      upper="1.26"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link5">
+    <inertial>
+      <origin
+        xyz="-0.0412279836312395 -0.0159188024281356 0.0517503207664082"
+        rpy="0 0 0" />
+      <mass
+        value="0.057435895842015" />
+      <inertia
+        ixx="1.09336029893626E-05"
+        ixy="-1.35614264015078E-07"
+        ixz="1.10596222131239E-06"
+        iyy="1.17195124438376E-05"
+        iyz="2.44615899500889E-07"
+        izz="1.04258288078326E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="-0.025 0 0.058809"
+      rpy="0 0.67271 1.5708" />
+    <parent
+      link="Empty_Link4" />
+    <child
+      link="Empty_Link5" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-2.2"
+      upper="0.94"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link6">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-16 0.00350000000000167 1.59594559789866E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.000985038522551446" />
+      <inertia
+        ixx="2.70230590891992E-08"
+        ixy="8.29765551967256E-24"
+        ixz="-1.66470098276297E-23"
+        iyy="4.60016369108949E-08"
+        iyz="1.57164316385075E-23"
+        izz="2.70230590891992E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fangzhen/meshes/Empty_Link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="revolute">
+    <origin
+      xyz="-0.060354 -0.020689 0.075758"
+      rpy="2.0816 0.45877 -2.2395" />
+    <parent
+      link="Empty_Link5" />
+    <child
+      link="Empty_Link6" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+  <ros2_control name="MyArmRealHardware" type="system">
+    <hardware>
+      <plugin>my_arm_hardware/SocketCanArmInterface</plugin>
+    </hardware>
+
+    <joint name="joint1">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="joint2">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="joint3">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="joint4">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="joint5">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+    <joint name="joint6">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+    </joint>
+  </ros2_control>
+
+</robot>

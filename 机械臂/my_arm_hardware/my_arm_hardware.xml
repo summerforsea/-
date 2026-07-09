@@ -1,0 +1,10 @@
+<library path="my_arm_hardware">
+  <class name="my_arm_hardware/SocketCanArmInterface"
+         type="my_arm_hardware::SocketCanArmInterface"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      这是用于控制步进电机的 SocketCAN 硬件接口插件。
+      它负责将 ros2_control 的浮点数指令翻译成十六进制 CAN 报文。
+    </description>
+  </class>
+</library>
