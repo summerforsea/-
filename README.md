@@ -6,7 +6,7 @@
 
 支持ROS2(Humbel)版本
 
-前置依赖：需要先安装RealRense SDK，RealRense—ROS，ikpy，opcn cv
+前置依赖：需要先安装RealRense SDK，RealRense—ROS，ikpy，Open cv
 
 RealRense SDK链接：https://github.com/realsenseai/librealsense?tab=readme-ov-file
 
