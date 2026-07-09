@@ -1,18 +1,55 @@
 # 水果全自动分拣礼盒一体化机器人系统
-针对水果分拣依赖人工、标准不一痛点，本团队基于地瓜RDK X5平台，融合T265视觉与OpenCV，实现自动上料、规格识别、空间定位及机械臂逆解控制，并检测礼盒槽位引导精准入盒。系统集成ROS2与STM32，完成全流程自动化，替代人工，具智慧农业落地潜力。
 
+针对水果分拣高度依赖人工、分拣标准不一等行业痛点，本团队基于**地瓜 RDK X5 嵌入式开发平台**，融合 **Intel RealSense T265 视觉视觉追踪技术**与 **OpenCV 图像处理**，自主研发了本套集“自动上料、规格识别、空间定位、机械臂逆解控制、礼盒槽位引导精准入盒”于一体的全自动分拣机器人系统。
 
-支持平台型号：RDK X5
+系统无缝集成 **ROS2** 与 **STM32** 下位机，实现了全流程的自动化控制，旨在用智能化技术替代传统人工，具备极高的智慧农业落地应用潜力。
 
-支持ROS2(Humbel)版本
+---
 
-前置依赖：需要先安装RealRense SDK，RealRense—ROS，ikpy，Open cv
+## 🛠️ 系统核心技术栈与平台支撑
 
-RealRense SDK链接：https://github.com/realsenseai/librealsense?tab=readme-ov-file
+* **上位机主控平台**：地瓜 RDK X5
+* **下位机微控制器**：STM32C8T6 / STM32 系列核心板
+* **分布式系统框架**：ROS2 (Humble 版本)
+* **核心算法库**：OpenCV (python)、YOLOv11 目标检测、机械臂逆向运动学 (ikpy)
 
-RealRense—ROS链接：https://github.com/realsenseai/realsense-ros?tab=readme-ov-file
+---
 
-ikpy链接:https://github.com/Phylliade/ikpy
+## 📦 环境部署与前置依赖
+
+在编译或运行本系统前，请确保主控端已成功配置以下 SDK 与底层依赖库：
+
+1.  **RealSense SDK (librealsense)** * 用于驱动 T265 摄像头底层数据流：[GitHub 官方链接](https://github.com/realsenseai/librealsense?tab=readme-ov-file)
+2.  **RealSense — ROS2 驱动**
+    * 将图像与追踪数据桥接至 ROS2 节点：[GitHub 官方链接](https://github.com/realsenseai/realsense-ros?tab=readme-ov-file)
+3.  **Python 依赖库**
+    * `opencv-python`：用于视觉去畸变与图像预处理。
+    * `ikpy`：用于六轴机械臂逆运动学解算：[GitHub 官方链接](https://github.com/Phylliade/ikpy)
+
+---
+
+## 📂 项目目录架构与模块拆解
+
+项目采用模块化设计，各个核心组件职责明确。以下为系统主目录结构：
+
+```text
+├── inter_t265/           # 视觉处理与 AI 推理模块
+│   ├── test_images/      # 测试数据集
+│   ├── t265_yolo11.bin   # 针对 BPU 优化的 YOLOv11 模型
+│   └── t265_yolo.py      # 图像去畸变与板端推理源码
+│
+├── 传送带/                # 自动化上料硬件与控制模块
+│   ├── 12降5V.epro2      # 降压模块立创EDA工程
+│   ├── 传送带拓展版.epro2  # 传送带核心板立创EDA工程
+│   └── chuansongdai.zip  # 电机驱动及下位机核心控制源码
+│
+├── 六轴机械臂/             # 精准分拣与抓取执行模块（全新加入）
+│   ├── [机械臂控制源码]   # 基于 ROS2 的运动规划与控制节点
+│   ├── [逆解运动学脚本]   # 结合 ikpy 的运动轨迹计算
+│   └── [硬件说明/工程文件] # 机械臂结构与驱动板相关工程
+│
+├── .gitignore            # Git 忽略文件
+└── README.md             # 本说明文档（系统主控说明）
 
 【传送带】
 
