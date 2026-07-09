@@ -18,7 +18,6 @@
 *   **RealSense SDK (librealsense)**：[GitHub 链接](https://github.com/realsenseai/librealsense?tab=readme-ov-file)
 *   **RealSense—ROS 驱动**：[GitHub 链接](https://github.com/realsenseai/realsense-ros?tab=readme-ov-file)
 *   **OpenCV** (opencv-python)
-*   **ikpy**：[GitHub 链接](https://github.com/Phylliade/ikpy)
 
 ---
 
